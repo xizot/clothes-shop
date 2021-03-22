@@ -68,21 +68,6 @@ export const NavMenu = styled.ul`
     }
 `;
 
-export const NavItem = styled.li`
-    height: 80px;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom-color 0.5s;
-    &:hover {
-        border-bottom-color: ${COLOR.PRIMARY};
-    }
-    @media only screen and (max-width: ${DEVICE.IPADPRO}) {
-        width: 100%;
-        &:hover {
-            border: none;
-        }
-    }
-`;
-
 export const NavLinks = styled(Link)`
     color: #fff;
     display: flex;
@@ -95,7 +80,23 @@ export const NavLinks = styled(Link)`
         justify-content: center;
     }
 `;
-
+export const NavItem = styled.li`
+    height: 80px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.5s;
+    &:hover {
+        border-bottom-color: ${COLOR.PRIMARY};
+        ${NavLinks} {
+            color: ${COLOR.PRIMARY};
+        }
+    }
+    @media only screen and (max-width: ${DEVICE.IPADPRO}) {
+        width: 100%;
+        &:hover {
+            border: none;
+        }
+    }
+`;
 export const NavItemBtn = styled.ul`
     @media screen and (max-width: ${DEVICE.IPADPRO}) {
         display: flex;

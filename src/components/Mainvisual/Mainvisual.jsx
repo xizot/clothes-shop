@@ -19,16 +19,22 @@ var settings = {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoPlay: true,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 5000,
 };
 
-function Mainvisual() {
+function Mainvisual({ fullHeight }) {
     return (
         <MainvisualSection>
             <MainvisualSlider {...settings}>
                 {MainVisualData && MainVisualData.length ? (
                     MainVisualData.map((item, index) => (
-                        <MainvisualSliderItem key={index} imgSrc={item.imgSrc}>
+                        <MainvisualSliderItem
+                            key={index}
+                            imgSrc={item.imgSrc}
+                            fullheight={fullHeight}
+                        >
                             <OverLayer />
                             <MainvisualItem>
                                 <Container>

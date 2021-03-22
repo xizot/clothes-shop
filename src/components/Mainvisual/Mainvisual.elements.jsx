@@ -3,17 +3,16 @@ import Slider from "react-slick";
 import { Button1, Container } from "../../GlobalStyle";
 import { DEVICE } from "../../constants";
 export const MainvisualSection = styled.section`
-    height: 100vh;
     width: 100%;
     position: fixed;
+
     top: 0;
     left: 0;
-    margin-bottom: 100vh;
 `;
 
 export const MainvisualSliderItem = styled.div`
     position: relative;
-    height: 100vh;
+    height: ${({ fullheight }) => (fullheight ? fullheight + "px" : "100vh")};
     background: ${({ imgSrc }) => (imgSrc ? `url(${imgSrc})` : "red")};
     outline: none;
     display: flex !important;

@@ -10,7 +10,20 @@ export const GlobalStyle = createGlobalStyle`
     html{
         font-size: 62.5%;
     }
-
+    a:hover, a img:hover{
+        opacity: .7;
+        transition: opacity .5s;
+    }
+    .slick-slider .slick-dots {
+        bottom: 30px;
+    }
+    .slick-slider .slick-dots li button:before{
+       font-size: 10px;
+       color: #ddd;
+    }
+    .slick-slider .slick-dots li.slick-active button:before{
+        color: ${COLOR.PRIMARY}
+    }
 `;
 
 export const Container = styled.div`
@@ -18,11 +31,9 @@ export const Container = styled.div`
     width: 100%;
     max-width: 1200px;
     padding: 0 50px;
+
     @media only screen and (max-width: ${DEVICE.IPAD}) {
-        padding: 0 35px;
-    }
-    @media only screen and (max-width: ${DEVICE.IPHONE}) {
-        padding: 0 15px;
+        padding: 0 30px;
     }
 `;
 
