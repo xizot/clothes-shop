@@ -14,6 +14,9 @@ function ProductList({ data, gutter = 10, lg, md, sm, xs, bt }) {
                         price={item.price.basis}
                         isSale={item.price.isSale}
                         salePrice={item.price.sale}
+                        description={item.description}
+                        rated={item.rated}
+                        subImages={item.subImages}
                     />
                 ))
             ) : (

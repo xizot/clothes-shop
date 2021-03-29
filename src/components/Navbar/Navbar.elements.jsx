@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "../../GlobalStyle";
-
 import { FaVaadin } from "react-icons/fa";
 import { COLOR, DEVICE } from "../../constants";
 
@@ -14,7 +13,7 @@ export const Nav = styled.nav`
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 100;
     @media only screen and (max-width: ${DEVICE.IPADPRO}) {
         background-color: #101522;
     }

@@ -5,13 +5,13 @@ import { DEVICE } from "../../constants";
 export const MainvisualSection = styled.section`
     width: 100%;
     position: fixed;
-
     top: 0;
     left: 0;
 `;
 
 export const MainvisualSliderItem = styled.div`
     position: relative;
+
     height: ${({ fullheight }) => (fullheight ? fullheight + "px" : "100vh")};
     background: ${({ imgSrc }) => (imgSrc ? `url(${imgSrc})` : "red")};
     outline: none;
@@ -67,7 +67,8 @@ export const MainvisualItem = styled.div`
 `;
 
 export const MainvisualSlider = styled(Slider)`
-    z-index: 1;
+    z-index: -1;
+
     & ${Container} {
         overflow: hidden auto;
     }

@@ -31,5 +31,4 @@ export const HomeProduct = styled.section`
 
 export const HomeContent = styled.section`
     position: relative;
-    z-index: 1;
 `;
