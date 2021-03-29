@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
+import Loading from "../components/Loading/Loading";
 import { PATH } from "../constants/path";
 const Home = lazy(() => import("../pages/Home/Home"));
-const Loading = () => <>Loading ...</>;
 function HomeRoute() {
     return (
         <Switch>

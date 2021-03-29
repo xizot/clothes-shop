@@ -25,8 +25,11 @@ import {
     ItemPrice,
     ItemSalePrice,
     ItemSubImages,
+    ItemSubImagesSlider,
     ItemSubImg,
     ItemTitle,
+    ItemSubImagesSlide,
+    ItemClose,
 } from "./ProductItem.elements";
 import { FaEye, FaHeart, FaCartPlus } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
@@ -93,14 +96,22 @@ function ProductItem({
             >
                 <Container>
                     <ItemModalContent onClick={(e) => e.stopPropagation()}>
-                        <ItemSubImages {...settings}>
-                            {subImages && subImages.length ? (
-                                subImages.map((item, index) => (
-                                    <ItemSubImg src={item} key={index} />
-                                ))
-                            ) : (
-                                <></>
-                            )}
+                        <ItemClose onClick={() => setIsOpenModal(false)} />
+                        <ItemSubImages>
+                            <ItemSubImagesSlider {...settings}>
+                                {subImages && subImages.length ? (
+                                    subImages.map((item, index) => (
+                                        <ItemSubImagesSlide>
+                                            <ItemSubImg
+                                                src={item}
+                                                key={index}
+                                            />
+                                        </ItemSubImagesSlide>
+                                    ))
+                                ) : (
+                                    <></>
+                                )}
+                            </ItemSubImagesSlider>
                         </ItemSubImages>
                         <ItemInfo>
                             <ItemTitle>{name}</ItemTitle>
@@ -124,32 +135,29 @@ function ProductItem({
                                         height: "100%",
                                     }}
                                 >
-                                    <section>
-                                        <ItemActionQuantity>
-                                            <ItemAngelLeft
-                                                onClick={() =>
-                                                    handleQuantity(
-                                                        currentQuantity > 1
-                                                            ? currentQuantity -
-                                                                  1
-                                                            : currentQuantity
-                                                    )
-                                                }
-                                            />
-                                            <ItemCurrentQuantity
-                                                style={{ height: "100%" }}
-                                            >
-                                                {currentQuantity}
-                                            </ItemCurrentQuantity>
-                                            <ItemAngelRight
-                                                onClick={() =>
-                                                    handleQuantity(
-                                                        currentQuantity + 1
-                                                    )
-                                                }
-                                            />
-                                        </ItemActionQuantity>
-                                    </section>
+                                    <ItemActionQuantity>
+                                        <ItemAngelLeft
+                                            onClick={() =>
+                                                handleQuantity(
+                                                    currentQuantity > 1
+                                                        ? currentQuantity - 1
+                                                        : currentQuantity
+                                                )
+                                            }
+                                        />
+                                        <ItemCurrentQuantity
+                                            style={{ height: "100%" }}
+                                        >
+                                            {currentQuantity}
+                                        </ItemCurrentQuantity>
+                                        <ItemAngelRight
+                                            onClick={() =>
+                                                handleQuantity(
+                                                    currentQuantity + 1
+                                                )
+                                            }
+                                        />
+                                    </ItemActionQuantity>
                                 </IconContext.Provider>
                                 <Button primary>Add to cart</Button>
                             </ItemAction>

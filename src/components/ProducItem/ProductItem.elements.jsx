@@ -1,4 +1,4 @@
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import styled from "styled-components";
@@ -234,7 +234,7 @@ export const ItemModal = styled.section`
     z-index: 200;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,17 +248,19 @@ export const ItemModal = styled.section`
     }
 `;
 
-export const ItemSubImages = styled(Slider)`
+export const ItemSubImagesSlide = styled.section`
+    display: block !important;
+`;
+export const ItemSubImages = styled.section`
     width: 50%;
-    height: 100%;
-    font-size: 0;
+
     @media only screen and (max-width: ${DEVICE.IPAD}) {
         width: 100%;
     }
 `;
+export const ItemSubImagesSlider = styled(Slider)``;
 export const ItemInfo = styled.section`
     width: 50%;
-    height: 100%;
     padding: 80px 50px;
     @media only screen and (max-width: ${DEVICE.IPAD}) {
         width: 100%;
@@ -269,6 +271,7 @@ export const ItemInfo = styled.section`
 `;
 
 export const ItemModalContent = styled.section`
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     background: #fff;
@@ -276,5 +279,17 @@ export const ItemModalContent = styled.section`
         margin: 100px 0;
     }
 `;
-
+export const ItemClose = styled(FaTimes)`
+    font-size: 3rem;
+    color: #cecece;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    @media only screen and (max-width: ${DEVICE.IPAD}) {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+`;
 // ▲ITEM MODEL▲

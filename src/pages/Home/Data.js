@@ -39,8 +39,8 @@ export const data = {
             name: "screaming head",
             img: require("./../../images/Item/item-2.png").default,
             subImages: [
-                require("./../../images/Item/item-1.png").default,
                 require("./../../images/Item/item-2.png").default,
+                require("./../../images/Item/item-1.png").default,
                 require("./../../images/Item/item-3.png").default,
                 require("./../../images/Item/item-4.png").default,
                 require("./../../images/Item/item-5.png").default,
@@ -70,9 +70,9 @@ export const data = {
             name: "youth style",
             img: require("./../../images/Item/item-3.png").default,
             subImages: [
-                require("./../../images/Item/item-1.png").default,
-                require("./../../images/Item/item-2.png").default,
                 require("./../../images/Item/item-3.png").default,
+                require("./../../images/Item/item-2.png").default,
+                require("./../../images/Item/item-1.png").default,
                 require("./../../images/Item/item-4.png").default,
                 require("./../../images/Item/item-5.png").default,
                 require("./../../images/Item/item-6.png").default,
@@ -101,10 +101,10 @@ export const data = {
             name: "foxy days",
             img: require("./../../images/Item/item-4.png").default,
             subImages: [
-                require("./../../images/Item/item-1.png").default,
+                require("./../../images/Item/item-4.png").default,
                 require("./../../images/Item/item-2.png").default,
                 require("./../../images/Item/item-3.png").default,
-                require("./../../images/Item/item-4.png").default,
+                require("./../../images/Item/item-1.png").default,
                 require("./../../images/Item/item-5.png").default,
                 require("./../../images/Item/item-6.png").default,
             ],
@@ -132,11 +132,11 @@ export const data = {
             name: "rainy army",
             img: require("./../../images/Item/item-5.png").default,
             subImages: [
-                require("./../../images/Item/item-1.png").default,
+                require("./../../images/Item/item-5.png").default,
                 require("./../../images/Item/item-2.png").default,
                 require("./../../images/Item/item-3.png").default,
                 require("./../../images/Item/item-4.png").default,
-                require("./../../images/Item/item-5.png").default,
+                require("./../../images/Item/item-1.png").default,
                 require("./../../images/Item/item-6.png").default,
             ],
             price: {
@@ -163,12 +163,12 @@ export const data = {
             name: "gray jacket",
             img: require("./../../images/Item/item-6.png").default,
             subImages: [
-                require("./../../images/Item/item-1.png").default,
+                require("./../../images/Item/item-6.png").default,
                 require("./../../images/Item/item-2.png").default,
                 require("./../../images/Item/item-3.png").default,
                 require("./../../images/Item/item-4.png").default,
                 require("./../../images/Item/item-5.png").default,
-                require("./../../images/Item/item-6.png").default,
+                require("./../../images/Item/item-1.png").default,
             ],
             price: {
                 basis: 49,
